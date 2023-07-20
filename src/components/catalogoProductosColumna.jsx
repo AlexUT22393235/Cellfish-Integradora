@@ -1,3 +1,4 @@
+import FiltradoProductos from "./filtradoDeProductos";
 const CatalogoProductosColumna = () => {
     // Datos de ejemplo para las cards
     const productos = [
@@ -22,9 +23,15 @@ const CatalogoProductosColumna = () => {
     ];
 
     return (
+        <div className="flex items-start">
+            <FiltradoProductos></FiltradoProductos>
         <div className="flex justify-end">
-            <div className="max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8  ml-20 "> {/*ml-20 y max-w-2x1*/}
+       
+            <div className="max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 mx-50"> {/*ml-20 y max-w-2x1*/}
+
+            
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                
                     {productos.map((producto) => (
                         <div key={producto.id} className="bg-white rounded-lg p-4 flex flex-col w-60">
                             <img src={producto.imagenUrl} alt={producto.titulo} className="w-full h-auto mb-4" />
@@ -32,8 +39,10 @@ const CatalogoProductosColumna = () => {
                             <p className="text-gray-500">${producto.precio}</p>
                         </div>
                     ))}
-                </div>
+                    </div>
+                
             </div>
+        </div>
         </div>
     );
 };
