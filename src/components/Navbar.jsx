@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom";
 export default function Navbar() {
     return (
         <>
-            <div className="bg-[#e6d1b1] dark:bg-[#242424] dark:text-white   text-black fixed top-0 left-0 w-full flex flex-row justify-between px-20 py-4 items-center z-[9999]">
+            <div className="bg-[#e6d1b1] dark:bg-[#242424] dark:text-white   text-black fixed top-0 left-0 w-full flex flex-row justify-between px-20 py-4 items-center z-[9999] ">
                 <div>
                     <h1 className="text-2xl font-semibold">
                         <Link to={"/"}>
@@ -27,11 +27,11 @@ export default function Navbar() {
                         <li>Nosotros</li>
                         </Link>
 
-                        <li>
+                        {/* <li>
                             <Link to="/acercade">
                                 <span className="text-black dark:text-white">Acerca de</span>
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="flex flex-row">

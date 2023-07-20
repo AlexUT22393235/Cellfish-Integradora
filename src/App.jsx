@@ -14,7 +14,7 @@ export default function App() {
 
 
   return (
-    <div>
+    <div  className="h-screen">
        {/* imagen de fondo  */}
       
       {/* <div className=" bg-fondo bg-blue-500 p-0 flex flex-col items-center justify-center gap-16 rounded-2xl h-[30rem] wx-[100rem] mx-auto">
@@ -69,7 +69,10 @@ export default function App() {
     </div> */}
 
     
-      <Footer></Footer>
+<Footer></Footer>
+  
     </div>
+    
+    
   );
 }
