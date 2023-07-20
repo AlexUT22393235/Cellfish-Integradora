@@ -2,7 +2,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import AcercaDe from "../components/acercade";
 import App from "../App";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Login from "../components/Login";
 import Productos from "../components/Productos";
 import Ofertas from "../components/Ofertas";
@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import AddUser from "../Pages/AddUser";
 import UpdateUser from "../Pages/UpdateUser";
 import IndexUser from "../Pages/IndexUser";
+import ConfirmacionPago from "../Pages/Pagos/ConfirmacionPago"
 
 
 export const routes = createBrowserRouter([
@@ -47,7 +48,10 @@ export const routes = createBrowserRouter([
                 path: "/UpdateUser/:id", // Agrega ":id" para indicar el parámetro dinámico
                 element: <UpdateUser />
               },
-              
+              {
+                path: "/ConfirmacionPago", // Agrega ":id" para indicar el parámetro dinámico
+                element: <ConfirmacionPago />
+              },
           
             {
                 path: "/ofertas",

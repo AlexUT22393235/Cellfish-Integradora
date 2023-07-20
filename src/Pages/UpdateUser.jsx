@@ -49,6 +49,7 @@ export default function UpdateUser() {
 
   return (
     <div className="flex items-center justify-center flex-col">
+      <br />
       <h1 className="text-3xl font-bold mb-4">Actualizar Usuario</h1>
 
       <form className="flex flex-col w-64">
