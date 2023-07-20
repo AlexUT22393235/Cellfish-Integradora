@@ -8,8 +8,9 @@ import Productos from "../components/Productos";
 import Ofertas from "../components/Ofertas";
 import Nosotros from "../components/nosotros";
 import Footer from "../components/Footer";
-
-
+import AddUser from "../Pages/AddUser";
+import UpdateUser from "../Pages/UpdateUser";
+import IndexUser from "../Pages/IndexUser";
 
 
 export const routes = createBrowserRouter([
@@ -35,9 +36,19 @@ export const routes = createBrowserRouter([
                     <Login />,
             },
             {
-                path: "/productos",
-                element: <Productos />
-            },
+                path: "/AddUser",
+                element: <AddUser/>
+              },
+              {
+                path: "/IndexUser",
+                element: <IndexUser/>
+              },
+              {
+                path: "/UpdateUser/:id", // Agrega ":id" para indicar el parámetro dinámico
+                element: <UpdateUser />
+              },
+              
+          
             {
                 path: "/ofertas",
                 element: <Ofertas />
@@ -45,9 +56,9 @@ export const routes = createBrowserRouter([
             {
                 path: "/nosotros",
                 element: <Nosotros />
-            }
+            },
+            
 
         ],
     },
 ]);
-
