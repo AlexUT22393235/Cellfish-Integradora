@@ -1,4 +1,5 @@
-import FiltradoProductos from "./filtradoDeProductos";
+import React from "react";
+
 const CatalogoProductosColumna = () => {
     // Datos de ejemplo para las cards
     const productos = [
@@ -22,10 +23,8 @@ const CatalogoProductosColumna = () => {
 
     ];
 
-    return (
-        <div className="flex items-start">
-            <FiltradoProductos></FiltradoProductos>
-        <div className="flex justify-end">
+    return ( 
+        <div className="flex justify-center">
        
             <div className="max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 mx-50"> {/*ml-20 y max-w-2x1*/}
 
@@ -43,7 +42,7 @@ const CatalogoProductosColumna = () => {
                 
             </div>
         </div>
-        </div>
+        
     );
 };
 

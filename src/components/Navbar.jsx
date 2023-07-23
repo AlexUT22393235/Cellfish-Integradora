@@ -15,8 +15,8 @@ export default function Navbar() {
                 </div>
                 <div className="item-center">
                     <ul className="flex flex-row gap-8">
-                        <Link to="/productos">
-                        <li>Productos</li>
+                        <Link to="/categoriasPrincipales">
+                        <li>Categorias</li>
                         </Link>
 
                         <Link to="/ofertas">
@@ -27,6 +27,11 @@ export default function Navbar() {
                         <li>Nosotros</li>
                         </Link>
 
+                        <Link to="/dashboard">
+                        <li>Dashboard</li>
+                        </Link>
+                        
+
                         {/* <li>
                             <Link to="/acercade">
                                 <span className="text-black dark:text-white">Acerca de</span>
@@ -35,14 +40,14 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="flex flex-row">
-                    <div className="flex flex-row border-2 p-2 rounded-xl gap-2">
+                    {/* <div className="flex flex-row border-2 p-2 rounded-xl gap-2">
                         <box-icon name="search" color="gray"></box-icon>
                         <input
                             className="bg-[#e6d1b1] outline-none dark:bg-[#242424] dark:text-white]"
                             type="search"
                             placeholder="Buscar"
                         ></input>
-                    </div>
+                    </div> */}
                     <div className="flex flex-row items-center px-4 gap-4">
                         {/* <box-icon name="cart"></box-icon> */}
                         <Link to="/Login">
