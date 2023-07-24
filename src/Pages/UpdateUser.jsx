@@ -19,20 +19,23 @@ export default function UpdateUser() {
 
   useEffect(function () {
     axios
-      .get("http://localhost:3000/users/" + id)
+      .get(`http://localhost:3001/api/users/${id}`)
       .then(function (dato) {
         const info = dato.data;
         setFormulario({
           UserName: info.UserName,
           Password: info.Password,
         });
+      })
+      .catch(function (error) {
+        console.error("Error al cargar el usuario:", error);
       });
-  }, []);
+  }, [id]);
 
   const handleSubmit = function (e) {
     e.preventDefault();
     axios
-      .patch("http://localhost:3000/users/" + id, formulario, {
+      .put(`http://localhost:3001/api/users/${id}`, formulario, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -42,8 +45,8 @@ export default function UpdateUser() {
         // Redirigir a la página de Usuarios
         window.location.href = "/IndexUser";
       })
-      .catch(function () {
-        console.error("Error al actualizar el usuario");
+      .catch(function (error) {
+        console.error("Error al actualizar el usuario:", error);
       });
   };
 
@@ -82,4 +85,3 @@ export default function UpdateUser() {
     </div>
   );
 }
-

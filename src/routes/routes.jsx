@@ -4,14 +4,17 @@ import AcercaDe from "../components/acercade";
 import App from "../App";
 import Navbar from "../components/Navbar";
 import Login from "../components/Login";
-import Productos from "../components/Productos";
+import Administrador from "../Pages/Administrador";
 import Ofertas from "../components/Ofertas";
-import Nosotros from "../components/nosotros";
+import Nosotros from "../components/Nosotros";
 import Footer from "../components/Footer";
+import AddAdministrador from "../Pages/AddAdministrador";
+import UpdateAdministrador from "../Pages/UpdateAdministrador";
+import IndexAdministrador from "../Pages/IndexAdministrador";
+import ConfirmacionPago from "../Pages/Pagos/ConfirmacionPago"
 import AddUser from "../Pages/AddUser";
 import UpdateUser from "../Pages/UpdateUser";
 import IndexUser from "../Pages/IndexUser";
-import ConfirmacionPago from "../Pages/Pagos/ConfirmacionPago"
 
 
 export const routes = createBrowserRouter([
@@ -37,20 +40,24 @@ export const routes = createBrowserRouter([
                     <Login />,
             },
             {
-                path: "/AddUser",
-                element: <AddUser/>
+                path: "/AddAdministrador",
+                element: <AddAdministrador />
               },
               {
-                path: "/IndexUser",
-                element: <IndexUser/>
+                path: "/IndexAdministrador",
+                element: <IndexAdministrador />
               },
               {
-                path: "/UpdateUser/:id", // Agrega ":id" para indicar el parámetro dinámico
-                element: <UpdateUser />
+                path: "/UpdateAdministrador/:id", // Agrega ":id" para indicar el parámetro dinámico
+                element: <UpdateAdministrador />
               },
               {
                 path: "/ConfirmacionPago", // Agrega ":id" para indicar el parámetro dinámico
                 element: <ConfirmacionPago />
+              },
+              {
+                path: "/Administrador", // Agrega ":id" para indicar el parámetro dinámico
+                element: <Administrador />
               },
           
             {
@@ -58,10 +65,22 @@ export const routes = createBrowserRouter([
                 element: <Ofertas />
             },
             {
-                path: "/nosotros",
+                path: "/Nosotros",
                 element: <Nosotros />
             },
-            
+            {
+              path: "/AddUser",
+              element: <AddUser/>
+            },
+            {
+              path: "/IndexUser",
+              element: <IndexUser/>
+            },
+            {
+              path: "/UpdateUser/:id", // Agrega ":id" para indicar el parámetro dinámico
+              element: <UpdateUser />
+            },
+           
 
         ],
     },
