@@ -17,6 +17,10 @@ import UpdateProducts from "../pages/dashboard/crudProdcuts/UpdateProducts";
 import IndexClient from "../pages/dashboard/crudClientes/IndexClient";
 import AddClients from "../pages/dashboard/crudClientes/AddClient";
 import UpdateClient from "../pages/dashboard/crudClientes/UpdateClient";
+import IndexPedidos from "../pages/dashboard/crudPedidos/IndexPedidos";
+import AddPedidos from "../pages/dashboard/crudPedidos/AddPedido";
+import UpdatePedidos from "../pages/dashboard/crudPedidos/UpdatePedidos";
+
 
 export const routes = createBrowserRouter([
     {
@@ -81,12 +85,20 @@ export const routes = createBrowserRouter([
         element: < IndexClient />,    
     },
     {
+        path:"/IndexPedidos",
+        element: < IndexPedidos />,    
+    },
+    {
         path:"/CrearProducto",
         element: < AddProducts />,    
     },
     {
         path:"/CrearCliente",
         element: < AddClients />,    
+    },
+    {
+        path:"/CrearPedido",
+        element: < AddPedidos />,    
     },
     // {
     //     path:"/ActualizarProducto",
@@ -99,6 +111,14 @@ export const routes = createBrowserRouter([
       {
         path: "/ActualizarCliente/:id", // Agregamos el parámetro :id
         element: <UpdateClient />
+      },
+      {
+        path: "/ActualizarProducto/:id", // Agregamos el parámetro :id
+        element: <UpdateProducts />
+      },
+      {
+        path: "/ActualizarPedido/:id", // Agregamos el parámetro :id
+        element: <UpdatePedidos />
       }
 ]);
 
