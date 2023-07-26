@@ -3,7 +3,7 @@ import DashboardSidebar from "../dashboardSideBar";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
-export default function UpdateProducts({handleProdcutoID }) {
+export default function UpdateProducts({ }) {
     const { id } = useParams();
     const [formulario, setFormulario] = useState({
         nombre: "",

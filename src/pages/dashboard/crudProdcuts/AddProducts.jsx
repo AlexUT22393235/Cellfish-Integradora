@@ -67,7 +67,7 @@ const AddProducts = () => {
                             value={producto.descripcion} 
                         />
                     </div>
-                    <d className="mb-4"></d>
+                    <div className="mb-4">
                         <label htmlFor="precio" className="block font-medium text-gray-700">
                             Precio:
                         </label>
@@ -79,6 +79,7 @@ const AddProducts = () => {
                             onChange={handleChange}
                             value={producto.precio}
                     ></input>
+                    </div>
                     <div className="mb-4">
                         <label htmlFor="imagen" className="block font-medium text-gray-700">
                             Imagen:
