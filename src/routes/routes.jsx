@@ -12,6 +12,9 @@ import DashboardIndex from "../pages/dashboard/dashboardIndex";
 import IndexProducts from "../pages/dashboard/crudProdcuts/indexProducts";
 import IndexCategorie from "../pages/dashboard/crudCategories/indexCategorie";
 import IndexProdcuts_Categories from "../pages/dashboard/crudProducts_Categories/IndexProducts_Categories";
+import AddProducts from "../pages/dashboard/crudProdcuts/addProducts";
+import UpdateProducts from "../pages/dashboard/crudProdcuts/UpdateProducts";
+
 
 export const routes = createBrowserRouter([
     {
@@ -70,6 +73,19 @@ export const routes = createBrowserRouter([
     {
         path:"/IndexProductos_Categorias",
         element: < IndexProdcuts_Categories />,    
-    }
+    },
+    {
+        path:"/CrearProducto",
+        element: < AddProducts />,    
+    },
+    // {
+    //     path:"/ActualizarProducto",
+    //     element: < UpdateProducts />,    
+    // },
+    {
+        path: "/ActualizarProducto/:id", // Agregamos el parámetro :id
+        element: <UpdateProducts />
+      }
 ]);
 
+//Toma en cuenta que si quieres mandar el ID por la acció de algún botón, deberás agregar el route que lo especifique.
